@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <button onclick="load()">LOAD</button>
+        <div id="div1"></div>
+    </body>
+    <script>
+        function load()
+        {
+            var xhr=new XMLHttpRequest()//object and a javascript call goes to XMLHTTPrequest object, and user sends a request from the ui.
+            xhr.open("get","sample.txt",true)// step 2: initializes the request to the server.
+            //the method parameter is the HTTP method
+            //true=asynchronous and false=synchronous
+            xhr.onreadystatechange=showdata//step 3: function call whenever the readystate changes
+            xhr.responseType="text"
+            xhr.send()//request to the server
+        }
+        function showdata()
+        {
+            
+        }
+    </script>
+</html>
